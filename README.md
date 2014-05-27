@@ -1,4 +1,0 @@
-electrodomesticosJaviPlus
-=========================
-
-Proyecto definitivo ElectrodomesticosJaviPlus
