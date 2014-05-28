@@ -41,27 +41,17 @@
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label emailLabel;
-            System.Windows.Forms.Label productoLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label unidadesLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(facturas));
+            System.Windows.Forms.Label nombreLabel2;
             this.panel1 = new System.Windows.Forms.Panel();
             this.facturaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.unidadesTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.dNITextBox1 = new System.Windows.Forms.TextBox();
@@ -75,10 +65,6 @@
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.dNITextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.facturaTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.FacturaTableAdapter();
-            this.tableAdapterManager = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager();
-            this.clientesTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ClientesTableAdapter();
-            this.productoTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ProductoTableAdapter();
             this.facturaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -92,6 +78,21 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.facturaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.button3 = new System.Windows.Forms.Button();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturaTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.FacturaTableAdapter();
+            this.tableAdapterManager = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager();
+            this.clientesTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ClientesTableAdapter();
+            this.productoTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ProductoTableAdapter();
+            this.nombreTextBox2 = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             dNILabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -104,19 +105,19 @@
             telefonoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            productoLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             unidadesLabel = new System.Windows.Forms.Label();
+            nombreLabel2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingNavigator)).BeginInit();
             this.facturaBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -227,19 +228,10 @@
             emailLabel.TabIndex = 14;
             emailLabel.Text = "email:";
             // 
-            // productoLabel
-            // 
-            productoLabel.AutoSize = true;
-            productoLabel.Location = new System.Drawing.Point(439, 41);
-            productoLabel.Name = "productoLabel";
-            productoLabel.Size = new System.Drawing.Size(53, 13);
-            productoLabel.TabIndex = 16;
-            productoLabel.Text = "Producto:";
-            // 
             // precioLabel
             // 
             precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(439, 67);
+            precioLabel.Location = new System.Drawing.Point(357, 67);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
             precioLabel.TabIndex = 18;
@@ -248,7 +240,7 @@
             // unidadesLabel
             // 
             unidadesLabel.AutoSize = true;
-            unidadesLabel.Location = new System.Drawing.Point(439, 93);
+            unidadesLabel.Location = new System.Drawing.Point(357, 93);
             unidadesLabel.Name = "unidadesLabel";
             unidadesLabel.Size = new System.Drawing.Size(55, 13);
             unidadesLabel.TabIndex = 20;
@@ -256,7 +248,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Fuchsia;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.facturaDataGridView);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -281,56 +273,17 @@
             this.facturaDataGridView.Size = new System.Drawing.Size(749, 220);
             this.facturaDataGridView.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Producto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Producto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Fecha";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unidades";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Unidades";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // facturaBindingSource
-            // 
-            this.facturaBindingSource.DataMember = "Factura";
-            this.facturaBindingSource.DataSource = this.database3DataSet;
-            // 
-            // database3DataSet
-            // 
-            this.database3DataSet.DataSetName = "Database3DataSet";
-            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel3.Controls.Add(nombreLabel2);
+            this.panel3.Controls.Add(this.nombreTextBox2);
+            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(unidadesLabel);
             this.panel3.Controls.Add(this.unidadesTextBox);
             this.panel3.Controls.Add(precioLabel);
             this.panel3.Controls.Add(this.precioTextBox);
-            this.panel3.Controls.Add(productoLabel);
-            this.panel3.Controls.Add(this.productoTextBox);
             this.panel3.Controls.Add(emailLabel);
             this.panel3.Controls.Add(this.emailTextBox);
             this.panel3.Controls.Add(direccionLabel);
@@ -349,12 +302,12 @@
             this.panel3.Controls.Add(this.idTextBox1);
             this.panel3.Location = new System.Drawing.Point(11, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(753, 210);
+            this.panel3.Size = new System.Drawing.Size(753, 222);
             this.panel3.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(442, 119);
+            this.button2.Location = new System.Drawing.Point(360, 119);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(291, 83);
             this.button2.TabIndex = 9;
@@ -364,7 +317,7 @@
             // unidadesTextBox
             // 
             this.unidadesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Unidades", true));
-            this.unidadesTextBox.Location = new System.Drawing.Point(498, 90);
+            this.unidadesTextBox.Location = new System.Drawing.Point(418, 86);
             this.unidadesTextBox.Name = "unidadesTextBox";
             this.unidadesTextBox.Size = new System.Drawing.Size(235, 20);
             this.unidadesTextBox.TabIndex = 21;
@@ -372,43 +325,25 @@
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(498, 64);
+            this.precioTextBox.Location = new System.Drawing.Point(418, 64);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(235, 20);
             this.precioTextBox.TabIndex = 19;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.database3DataSet;
-            // 
-            // productoTextBox
-            // 
-            this.productoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Producto", true));
-            this.productoTextBox.Location = new System.Drawing.Point(498, 38);
-            this.productoTextBox.Name = "productoTextBox";
-            this.productoTextBox.Size = new System.Drawing.Size(235, 20);
-            this.productoTextBox.TabIndex = 17;
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(78, 170);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(329, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(156, 20);
             this.emailTextBox.TabIndex = 15;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.database3DataSet;
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Direccion", true));
             this.direccionTextBox.Location = new System.Drawing.Point(78, 142);
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(329, 20);
+            this.direccionTextBox.Size = new System.Drawing.Size(156, 20);
             this.direccionTextBox.TabIndex = 13;
             // 
             // telefonoTextBox
@@ -416,7 +351,7 @@
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Telefono", true));
             this.telefonoTextBox.Location = new System.Drawing.Point(78, 116);
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(329, 20);
+            this.telefonoTextBox.Size = new System.Drawing.Size(156, 20);
             this.telefonoTextBox.TabIndex = 11;
             // 
             // dNITextBox1
@@ -424,7 +359,7 @@
             this.dNITextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "DNI", true));
             this.dNITextBox1.Location = new System.Drawing.Point(78, 90);
             this.dNITextBox1.Name = "dNITextBox1";
-            this.dNITextBox1.Size = new System.Drawing.Size(329, 20);
+            this.dNITextBox1.Size = new System.Drawing.Size(156, 20);
             this.dNITextBox1.TabIndex = 9;
             // 
             // apellidoTextBox1
@@ -432,7 +367,7 @@
             this.apellidoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Apellido", true));
             this.apellidoTextBox1.Location = new System.Drawing.Point(78, 64);
             this.apellidoTextBox1.Name = "apellidoTextBox1";
-            this.apellidoTextBox1.Size = new System.Drawing.Size(329, 20);
+            this.apellidoTextBox1.Size = new System.Drawing.Size(156, 20);
             this.apellidoTextBox1.TabIndex = 7;
             // 
             // nombreTextBox1
@@ -440,7 +375,7 @@
             this.nombreTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nombre", true));
             this.nombreTextBox1.Location = new System.Drawing.Point(78, 38);
             this.nombreTextBox1.Name = "nombreTextBox1";
-            this.nombreTextBox1.Size = new System.Drawing.Size(329, 20);
+            this.nombreTextBox1.Size = new System.Drawing.Size(156, 20);
             this.nombreTextBox1.TabIndex = 6;
             // 
             // fechaDateTimePicker
@@ -516,26 +451,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(211, 20);
             this.idTextBox.TabIndex = 1;
-            // 
-            // facturaTableAdapter
-            // 
-            this.facturaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
-            this.tableAdapterManager.FacturaTableAdapter = this.facturaTableAdapter;
-            this.tableAdapterManager.ProductoTableAdapter = this.productoTableAdapter;
-            this.tableAdapterManager.UpdateOrder = electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // facturaBindingNavigator
             // 
@@ -661,6 +576,103 @@
             this.facturaBindingNavigatorSaveItem.Text = "Guardar datos";
             this.facturaBindingNavigatorSaveItem.Click += new System.EventHandler(this.facturaBindingNavigatorSaveItem_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(240, 38);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "BUSCAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // facturaBindingSource
+            // 
+            this.facturaBindingSource.DataMember = "Factura";
+            this.facturaBindingSource.DataSource = this.database3DataSet;
+            // 
+            // database3DataSet
+            // 
+            this.database3DataSet.DataSetName = "Database3DataSet";
+            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cliente";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Producto";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Producto";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unidades";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Unidades";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.database3DataSet;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.database3DataSet;
+            // 
+            // facturaTableAdapter
+            // 
+            this.facturaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientesTableAdapter = this.clientesTableAdapter;
+            this.tableAdapterManager.FacturaTableAdapter = this.facturaTableAdapter;
+            this.tableAdapterManager.ProductoTableAdapter = this.productoTableAdapter;
+            this.tableAdapterManager.UpdateOrder = electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // nombreLabel2
+            // 
+            nombreLabel2.AutoSize = true;
+            nombreLabel2.Location = new System.Drawing.Point(357, 43);
+            nombreLabel2.Name = "nombreLabel2";
+            nombreLabel2.Size = new System.Drawing.Size(47, 13);
+            nombreLabel2.TabIndex = 22;
+            nombreLabel2.Text = "Nombre:";
+            // 
+            // nombreTextBox2
+            // 
+            this.nombreTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Nombre", true));
+            this.nombreTextBox2.Location = new System.Drawing.Point(418, 38);
+            this.nombreTextBox2.Name = "nombreTextBox2";
+            this.nombreTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox2.TabIndex = 23;
+            // 
             // facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,17 +685,17 @@
             this.Load += new System.EventHandler(this.facturas_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingNavigator)).EndInit();
             this.facturaBindingNavigator.ResumeLayout(false);
             this.facturaBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,7 +726,6 @@
         private Database3DataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox productoTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
@@ -738,5 +749,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox unidadesTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox nombreTextBox2;
     }
 }

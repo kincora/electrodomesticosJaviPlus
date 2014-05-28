@@ -28,11 +28,19 @@ namespace electrodomesticosJaviPlus
         private void facturas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.database3DataSet.Producto);
+            //this.productoTableAdapter.Fill(this.database3DataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Clientes' Puede moverla o quitarla según sea necesario.
-            this.clientesTableAdapter.Fill(this.database3DataSet.Clientes);
+            //this.clientesTableAdapter.Fill(this.database3DataSet.Clientes);
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Factura' Puede moverla o quitarla según sea necesario.
-            this.facturaTableAdapter.Fill(this.database3DataSet.Factura);
+            // this.facturaTableAdapter.Fill(this.database3DataSet.Factura);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //para que rellene los campos del cliente al pulsar el boton buscar
+            this.clientesTableAdapter.FillByNombre(this.database3DataSet.Clientes, nombreTextBox1.Text);
+            //para que rellene los campos del producto al pulsar el boton buscar
 
         }
     }
