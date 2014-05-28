@@ -40,7 +40,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.stockTextBox = new System.Windows.Forms.TextBox();
             this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -87,13 +86,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.productoDataGridView);
-            this.panel1.Controls.Add(this.stockTextBox);
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1256, 478);
+            this.panel1.Size = new System.Drawing.Size(1272, 478);
             this.panel1.TabIndex = 0;
             // 
             // productoDataGridView
@@ -108,7 +105,7 @@
             this.precioDataGridViewTextBoxColumn,
             this.stockDataGridViewTextBoxColumn});
             this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(394, 47);
+            this.productoDataGridView.Location = new System.Drawing.Point(371, 3);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.Size = new System.Drawing.Size(376, 330);
             this.productoDataGridView.TabIndex = 2;
@@ -127,6 +124,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.productoDataGridView);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(idLabel1);
             this.panel2.Controls.Add(stockLabel1);
@@ -155,13 +153,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // stockTextBox
-            // 
-            this.stockTextBox.Location = new System.Drawing.Point(953, 291);
-            this.stockTextBox.Name = "stockTextBox";
-            this.stockTextBox.Size = new System.Drawing.Size(283, 20);
-            this.stockTextBox.TabIndex = 7;
-            // 
             // productoBindingNavigator
             // 
             this.productoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -188,7 +179,7 @@
             this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(1256, 25);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(790, 25);
             this.productoBindingNavigator.TabIndex = 1;
             this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -442,14 +433,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1256, 474);
+            this.ClientSize = new System.Drawing.Size(790, 474);
             this.Controls.Add(this.productoBindingNavigator);
             this.Controls.Add(this.panel1);
             this.Name = "almacen";
             this.Text = "almacen";
             this.Load += new System.EventHandler(this.almacen_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -488,7 +478,6 @@
         private System.Windows.Forms.DataGridView productoDataGridView;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox stockTextBox;
         private System.Windows.Forms.BindingSource database3DataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
