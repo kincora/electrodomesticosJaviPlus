@@ -2127,7 +2127,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
+<<<<<<< HEAD
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+=======
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Nombre, Apellido, DNI, Telefono, Direccion, email FROM Clientes";
@@ -2138,6 +2142,20 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
                 "Nombre = ?";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
+<<<<<<< HEAD
+=======
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO `Clientes` (`Nombre`, `Apellido`, `DNI`, `Telefono`, `Direccion`, `em" +
+                "ail`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Apellido", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Apellido", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DNI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DNI", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Telefono", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telefono", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Direccion", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Direccion", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("email", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "email", global::System.Data.DataRowVersion.Current, false, null));
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2168,7 +2186,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+<<<<<<< HEAD
         public virtual int FillByNombreBeatriz(Database3DataSet.ClientesDataTable dataTable, string Nombre) {
+=======
+        public virtual int FillByNombre(Database3DataSet.ClientesDataTable dataTable, string Nombre) {
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -2187,7 +2209,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+<<<<<<< HEAD
         public virtual Database3DataSet.ClientesDataTable GetDataByNombreBeatriz(string Nombre) {
+=======
+        public virtual Database3DataSet.ClientesDataTable GetDataByNombre(string Nombre) {
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -2460,6 +2486,65 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQueryJorge(string Nombre, string Apellido, global::System.Nullable<int> DNI, global::System.Nullable<int> Telefono, string Direccion, string email) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
+            if ((Nombre == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Apellido == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Apellido));
+            }
+            if ((DNI.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(DNI.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Telefono.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(Telefono.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Direccion == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Direccion));
+            }
+            if ((email == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(email));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -3109,7 +3194,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
+<<<<<<< HEAD
             this._commandCollection[1].CommandText = "SELECT Id, Nombre, Familia, Precio, Stock FROM Producto WHERE Nombre=?";
+=======
+            this._commandCollection[1].CommandText = "SELECT Id, Nombre, Familia, Precio, Stock FROM Producto where nombre = ?";
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nombre", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -3142,7 +3231,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+<<<<<<< HEAD
         public virtual int FillByNombreBeatriz(Database3DataSet.ProductoDataTable dataTable, string Nombre) {
+=======
+        public virtual int FillBynombreAlex(Database3DataSet.ProductoDataTable dataTable, string Nombre) {
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3161,7 +3254,11 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+<<<<<<< HEAD
         public virtual Database3DataSet.ProductoDataTable GetDataByNombreBeatriz(string Nombre) {
+=======
+        public virtual Database3DataSet.ProductoDataTable GetDataBynombreAlex(string Nombre) {
+>>>>>>> 0a33c94c73635646a405d694ba8d68290d6bab57
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
