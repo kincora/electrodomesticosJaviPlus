@@ -46,7 +46,7 @@
             System.Windows.Forms.Label productoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(facturas));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.facturaDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +80,7 @@
             this.apellidoTextBox1 = new System.Windows.Forms.TextBox();
             this.nombreTextBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.productoTextBox = new System.Windows.Forms.TextBox();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.unidadesTextBox = new System.Windows.Forms.TextBox();
@@ -102,7 +103,7 @@
             this.tableAdapterManager = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager();
             this.clientesTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ClientesTableAdapter();
             this.productoTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ProductoTableAdapter();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             nombreLabel1 = new System.Windows.Forms.Label();
             apellidoLabel1 = new System.Windows.Forms.Label();
             dNILabel1 = new System.Windows.Forms.Label();
@@ -268,6 +269,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.facturaDataGridView);
             this.panel1.Controls.Add(this.panel3);
@@ -277,15 +279,15 @@
             this.panel1.Size = new System.Drawing.Size(784, 585);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // button5
             // 
-            this.button2.Location = new System.Drawing.Point(601, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "GENERAR FACTURA";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Location = new System.Drawing.Point(585, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 51);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "VER TODO";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // facturaDataGridView
             // 
@@ -593,6 +595,16 @@
             this.panel2.Size = new System.Drawing.Size(753, 92);
             this.panel2.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(601, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 46);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "GENERAR FACTURA";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // productoTextBox
             // 
             this.productoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Producto", true));
@@ -780,15 +792,15 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // button5
+            // button6
             // 
-            this.button5.Location = new System.Drawing.Point(585, 385);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 51);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "VER TODO";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.Location = new System.Drawing.Point(585, 471);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(148, 23);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "INICIO";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // facturas
             // 
@@ -878,5 +890,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

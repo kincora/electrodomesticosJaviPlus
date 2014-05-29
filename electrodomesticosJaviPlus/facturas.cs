@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*Realizado por Beatriz Garcia Rad*/
 
+/***********************Datos para hacer pruebas**************************************/
+/*Las busquedas se realizan por nombre
+ clientes : Javi, pepe o beatriz
+ productos: lg, samsung, balay*/
+/************************************************************************************/
 namespace electrodomesticosJaviPlus
 {
     public partial class facturas : Form
@@ -74,6 +80,12 @@ namespace electrodomesticosJaviPlus
         {
             // PARA VER LO QUE TENEMOS GUARDADO EN LA BASE DE DATOS
             this.facturaTableAdapter.Fill(this.database3DataSet.Factura);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // PARA VOLVER A LA PANTALLA PRINCIPAL 
+            new Form1().ShowDialog();
         }
         
 
