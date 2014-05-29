@@ -43,5 +43,10 @@ namespace electrodomesticosJaviPlus
             //para que rellene los campos del producto al pulsar el boton buscar
 
         }
+
+        private void familiaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
