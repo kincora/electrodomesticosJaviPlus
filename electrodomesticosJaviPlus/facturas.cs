@@ -39,14 +39,27 @@ namespace electrodomesticosJaviPlus
         private void button3_Click(object sender, EventArgs e)
         {
             //para que rellene los campos del cliente al pulsar el boton buscar
-            this.clientesTableAdapter.FillByNombre(this.database3DataSet.Clientes, nombreTextBox1.Text);
+            this.clientesTableAdapter.FillByNombreBeatriz(this.database3DataSet.Clientes, nombreTextBox1.Text);
             //para que rellene los campos del producto al pulsar el boton buscar
 
         }
 
-        private void familiaTextBox_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            //para que rellene los campos del producto al pulsar el boton buscar
 
+            this.productoTableAdapter.FillByNombreBeatriz(this.database3DataSet.Producto, nombreTextBox.Text);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //calculamos el total
+            int total= int.Parse(textBox2.Text)*int.Parse(precioTextBox.Text);
+            textBox1.Text = Convert.ToString(total);
+            //añadimos los datos a la factura:
+            
+        }
+
+      
     }
 }
