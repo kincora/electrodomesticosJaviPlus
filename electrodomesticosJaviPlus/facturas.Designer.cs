@@ -41,7 +41,6 @@
             System.Windows.Forms.Label familiaLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label unidadesLabel;
-            System.Windows.Forms.Label idLabel2;
             System.Windows.Forms.Label clienteLabel;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label productoLabel;
@@ -49,7 +48,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.facturaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,10 +66,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.familiaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
@@ -76,7 +85,6 @@
             this.unidadesTextBox = new System.Windows.Forms.TextBox();
             this.clienteTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.idTextBox2 = new System.Windows.Forms.TextBox();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -90,20 +98,11 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.facturaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.facturaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.button4 = new System.Windows.Forms.Button();
-            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturaTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.FacturaTableAdapter();
             this.tableAdapterManager = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager();
             this.clientesTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ClientesTableAdapter();
             this.productoTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ProductoTableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
             nombreLabel1 = new System.Windows.Forms.Label();
             apellidoLabel1 = new System.Windows.Forms.Label();
             dNILabel1 = new System.Windows.Forms.Label();
@@ -116,20 +115,19 @@
             familiaLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             unidadesLabel = new System.Windows.Forms.Label();
-            idLabel2 = new System.Windows.Forms.Label();
             clienteLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             productoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingNavigator)).BeginInit();
             this.facturaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel1
@@ -234,25 +232,16 @@
             // unidadesLabel
             // 
             unidadesLabel.AutoSize = true;
-            unidadesLabel.Location = new System.Drawing.Point(544, 56);
+            unidadesLabel.Location = new System.Drawing.Point(380, 58);
             unidadesLabel.Name = "unidadesLabel";
             unidadesLabel.Size = new System.Drawing.Size(34, 13);
             unidadesLabel.TabIndex = 30;
             unidadesLabel.Text = "Total:";
             // 
-            // idLabel2
-            // 
-            idLabel2.AutoSize = true;
-            idLabel2.Location = new System.Drawing.Point(23, 56);
-            idLabel2.Name = "idLabel2";
-            idLabel2.Size = new System.Drawing.Size(19, 13);
-            idLabel2.TabIndex = 0;
-            idLabel2.Text = "Id:";
-            // 
             // clienteLabel
             // 
             clienteLabel.AutoSize = true;
-            clienteLabel.Location = new System.Drawing.Point(186, 56);
+            clienteLabel.Location = new System.Drawing.Point(22, 58);
             clienteLabel.Name = "clienteLabel";
             clienteLabel.Size = new System.Drawing.Size(42, 13);
             clienteLabel.TabIndex = 35;
@@ -261,7 +250,7 @@
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(268, 15);
+            fechaLabel.Location = new System.Drawing.Point(208, 15);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(40, 13);
             fechaLabel.TabIndex = 36;
@@ -270,7 +259,7 @@
             // productoLabel
             // 
             productoLabel.AutoSize = true;
-            productoLabel.Location = new System.Drawing.Point(364, 56);
+            productoLabel.Location = new System.Drawing.Point(200, 58);
             productoLabel.Name = "productoLabel";
             productoLabel.Size = new System.Drawing.Size(53, 13);
             productoLabel.TabIndex = 37;
@@ -279,7 +268,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.facturaDataGridView);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -290,12 +279,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(575, 396);
+            this.button2.Location = new System.Drawing.Point(601, 29);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 46);
+            this.button2.Size = new System.Drawing.Size(121, 46);
             this.button2.TabIndex = 3;
             this.button2.Text = "GENERAR FACTURA";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // facturaDataGridView
             // 
@@ -312,6 +302,46 @@
             this.facturaDataGridView.Name = "facturaDataGridView";
             this.facturaDataGridView.Size = new System.Drawing.Size(542, 204);
             this.facturaDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cliente";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Producto";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Producto";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unidades";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Unidades";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // facturaBindingSource
+            // 
+            this.facturaBindingSource.DataMember = "Factura";
+            this.facturaBindingSource.DataSource = this.database3DataSet;
+            // 
+            // database3DataSet
+            // 
+            this.database3DataSet.DataSetName = "Database3DataSet";
+            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -352,6 +382,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(753, 230);
             this.panel3.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(477, 184);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 23);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "Calcular";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox2
             // 
@@ -435,6 +475,11 @@
             this.precioTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioTextBox.TabIndex = 27;
             // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.database3DataSet;
+            // 
             // familiaTextBox
             // 
             this.familiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Familia", true));
@@ -466,6 +511,11 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(156, 20);
             this.idTextBox.TabIndex = 23;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.database3DataSet;
             // 
             // button3
             // 
@@ -528,6 +578,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(productoLabel);
             this.panel2.Controls.Add(this.productoTextBox);
             this.panel2.Controls.Add(fechaLabel);
@@ -537,8 +588,6 @@
             this.panel2.Controls.Add(unidadesLabel);
             this.panel2.Controls.Add(this.clienteTextBox);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(idLabel2);
-            this.panel2.Controls.Add(this.idTextBox2);
             this.panel2.Location = new System.Drawing.Point(11, 271);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(753, 92);
@@ -547,7 +596,7 @@
             // productoTextBox
             // 
             this.productoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Producto", true));
-            this.productoTextBox.Location = new System.Drawing.Point(423, 53);
+            this.productoTextBox.Location = new System.Drawing.Point(259, 55);
             this.productoTextBox.Name = "productoTextBox";
             this.productoTextBox.Size = new System.Drawing.Size(100, 20);
             this.productoTextBox.TabIndex = 38;
@@ -555,7 +604,7 @@
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.facturaBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(314, 11);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(254, 11);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaDateTimePicker.TabIndex = 37;
@@ -563,7 +612,7 @@
             // unidadesTextBox
             // 
             this.unidadesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Unidades", true));
-            this.unidadesTextBox.Location = new System.Drawing.Point(591, 53);
+            this.unidadesTextBox.Location = new System.Drawing.Point(427, 55);
             this.unidadesTextBox.Name = "unidadesTextBox";
             this.unidadesTextBox.Size = new System.Drawing.Size(100, 20);
             this.unidadesTextBox.TabIndex = 31;
@@ -571,7 +620,7 @@
             // clienteTextBox
             // 
             this.clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Cliente", true));
-            this.clienteTextBox.Location = new System.Drawing.Point(234, 53);
+            this.clienteTextBox.Location = new System.Drawing.Point(70, 55);
             this.clienteTextBox.Name = "clienteTextBox";
             this.clienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.clienteTextBox.TabIndex = 36;
@@ -586,14 +635,6 @@
             this.label5.Size = new System.Drawing.Size(92, 25);
             this.label5.TabIndex = 35;
             this.label5.Text = "Factura";
-            // 
-            // idTextBox2
-            // 
-            this.idTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturaBindingSource, "Id", true));
-            this.idTextBox2.Location = new System.Drawing.Point(48, 53);
-            this.idTextBox2.Name = "idTextBox2";
-            this.idTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.idTextBox2.TabIndex = 1;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -719,66 +760,6 @@
             this.facturaBindingNavigator.TabIndex = 1;
             this.facturaBindingNavigator.Text = "bindingNavigator1";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(477, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 23);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "Calcular";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // facturaBindingSource
-            // 
-            this.facturaBindingSource.DataMember = "Factura";
-            this.facturaBindingSource.DataSource = this.database3DataSet;
-            // 
-            // database3DataSet
-            // 
-            this.database3DataSet.DataSetName = "Database3DataSet";
-            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cliente";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Producto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Producto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Fecha";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unidades";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Unidades";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.database3DataSet;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.database3DataSet;
-            // 
             // facturaTableAdapter
             // 
             this.facturaTableAdapter.ClearBeforeFill = true;
@@ -799,6 +780,16 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(585, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 51);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "VER TODO";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,17 +802,17 @@
             this.Load += new System.EventHandler(this.facturas_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingNavigator)).EndInit();
             this.facturaBindingNavigator.ResumeLayout(false);
             this.facturaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,11 +872,11 @@
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
         private System.Windows.Forms.TextBox clienteTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox idTextBox2;
         private System.Windows.Forms.TextBox productoTextBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -27,6 +27,7 @@ namespace electrodomesticosJaviPlus
 
         private void facturas_Load(object sender, EventArgs e)
         {
+            //QUEREMOS QUE APAREZCA EN BLANCO AL INICIAR FACTURAS POR ESO COMENTAMOS ESTAS LINEAS
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Producto' Puede moverla o quitarla según sea necesario.
             //this.productoTableAdapter.Fill(this.database3DataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Clientes' Puede moverla o quitarla según sea necesario.
@@ -57,8 +58,25 @@ namespace electrodomesticosJaviPlus
             int total= int.Parse(textBox2.Text)*int.Parse(precioTextBox.Text);
             textBox1.Text = Convert.ToString(total);
             //añadimos los datos a la factura:
-            
+            clienteTextBox.Text = idTextBox.Text;
+            productoTextBox.Text = idTextBox1.Text;
+            unidadesTextBox.Text = textBox1.Text;
+
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // GUARDAMOS LOS DATOS DE LA FACTURA EN LA BASE DE DATOS
+            this.facturaTableAdapter.Insert(clienteTextBox.Text, productoTextBox.Text, DateTime.Parse(fechaDateTimePicker.Text), int.Parse(unidadesTextBox.Text));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // PARA VER LO QUE TENEMOS GUARDADO EN LA BASE DE DATOS
+            this.facturaTableAdapter.Fill(this.database3DataSet.Factura);
+        }
+        
+
 
       
     }
