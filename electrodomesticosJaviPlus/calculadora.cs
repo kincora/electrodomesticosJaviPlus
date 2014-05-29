@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Autor del proyecto Javier colaboracion con Fiorella
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,7 @@ namespace electrodomesticosJaviPlus
 
         }
 
-
+        //Este metodo recoge la longitud de las palabras en este caso numeros
         private void btnret_Click(object sender, EventArgs e)
         {
 
@@ -48,7 +49,7 @@ namespace electrodomesticosJaviPlus
         }
 
 
-
+        //limpiar la pantalla
         private void btnc_Click(object sender, EventArgs e)
         {
             Txtpantalla.Clear();
@@ -60,6 +61,7 @@ namespace electrodomesticosJaviPlus
         {
 
         }
+        //configuracion del boton 6
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -77,7 +79,7 @@ namespace electrodomesticosJaviPlus
 
                 }
         }
-
+        //configuracion del boton 1
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -96,14 +98,14 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton de los decimales
         private void button15_Click_1(object sender, EventArgs e)
         {
             Txtpantalla.Text = Txtpantalla.Text + ",";
             button15.Enabled = false;
 
         }
-
+        //configuracion del boton 2
         private void button2_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -120,7 +122,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 3
         private void button3_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -137,7 +139,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 4
         private void button4_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -154,7 +156,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 5
         private void button5_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -171,7 +173,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 7
         private void button7_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -188,7 +190,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 8
         private void button8_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -205,7 +207,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 9
         private void button9_Click(object sender, EventArgs e)
         {
             if (Txtpantalla.TextLength <= 15)
@@ -222,7 +224,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton 10
         private void button10_Click(object sender, EventArgs e)
         {
 
@@ -251,13 +253,13 @@ namespace electrodomesticosJaviPlus
 
              }*/
         }
-
+        //configuracion del boton CE
         private void button19_Click(object sender, EventArgs e)
         {
             Txtpantalla.Text = "";
             button15.Enabled = true;
         }
-
+        //configuracion del boton sumar
         private void button17_Click(object sender, EventArgs e)
         {
             operaciones = "+";
@@ -268,9 +270,10 @@ namespace electrodomesticosJaviPlus
             if (Txtpantalla.Text == "") { noOperar = true; return; }
             noOperar = false;
             cantidad1 = double.Parse(Txtpantalla.Text);
+            //esta condicion permite recoger numeros negativos
             if (chivatoNegativo) { cantidad1 = cantidad1 * -1; chivatoNegativo = false; }
         }
-
+        //configuracion del boton restar
         private void button18_Click(object sender, EventArgs e)
         {
             operaciones = "-";
@@ -281,10 +284,11 @@ namespace electrodomesticosJaviPlus
             detectaoperacion = true;
             button15.Enabled = true;
             cantidad1 = double.Parse(Txtpantalla.Text);
+            //esta condicion permite recoger numeros negativos
             if (chivatoNegativo) { cantidad1 = cantidad1 * -1; chivatoNegativo = false; }
 
         }
-
+        //configuracion del boton dividir
         private void button12_Click(object sender, EventArgs e)
         {
             operaciones = "/";
@@ -295,10 +299,11 @@ namespace electrodomesticosJaviPlus
             if (Txtpantalla.Text == "") { noOperar = true; return; }
             noOperar = false;
             cantidad1 = double.Parse(Txtpantalla.Text);
+            //esta condicion permite recoger numeros negativos
             if (chivatoNegativo) { cantidad1 = cantidad1 * -1; chivatoNegativo = false; }
 
         }
-
+        //configuracion del boton multiplicar
         private void button11_Click(object sender, EventArgs e)
         {
             operaciones = "*";
@@ -309,6 +314,7 @@ namespace electrodomesticosJaviPlus
             if (Txtpantalla.Text == "") { noOperar = true; return; }
             noOperar = false;
             cantidad1 = double.Parse(Txtpantalla.Text);
+            //esta condicion permite recoger numeros negativos
             if (chivatoNegativo) { cantidad1 = cantidad1 * -1; chivatoNegativo = false; }
         }
 
@@ -344,7 +350,7 @@ namespace electrodomesticosJaviPlus
 
             return 0;
         }*/
-
+        //configuracion del boton igual
         private void button16_Click(object sender, EventArgs e)
         {
             // if (Txtpantalla.Text == "") noOperar = true;
@@ -386,7 +392,7 @@ namespace electrodomesticosJaviPlus
 
             }
         }
-
+        //configuracion del boton raiz cuadrada
         private void button13_Click(object sender, EventArgs e)
         {
             cantidad1 = double.Parse(Txtpantalla.Text);
@@ -403,7 +409,7 @@ namespace electrodomesticosJaviPlus
         {
 
         }
-
+        //configuracion del boton de potencias
         private void button14_Click(object sender, EventArgs e)
         {
             operaciones = "pot";
