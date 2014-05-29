@@ -55,6 +55,7 @@ namespace electrodomesticosJaviPlus
         private void button1_Click(object sender, EventArgs e)
         {
             //Aqui deberia haber un codigo el cual nos permitiera poder guardar un cliente en la base de datos
+            this.clientesTableAdapter.Insert(nombreTextBox.Text, apellidoTextBox.Text, int.Parse(dNITextBox.Text), int.Parse(telefonoTextBox.Text), direccionTextBox.Text, emailTextBox.Text);
         }
     }
 }
