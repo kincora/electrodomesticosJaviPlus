@@ -3029,7 +3029,7 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBynombre(Database3DataSet.ProductoDataTable dataTable, string Nombre) {
+        public virtual int FillBynombreAlex(Database3DataSet.ProductoDataTable dataTable, string Nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -3048,7 +3048,7 @@ namespace electrodomesticosJaviPlus.Database3DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Database3DataSet.ProductoDataTable GetDataBynombre(string Nombre) {
+        public virtual Database3DataSet.ProductoDataTable GetDataBynombreAlex(string Nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Nombre == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;

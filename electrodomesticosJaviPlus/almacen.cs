@@ -30,7 +30,7 @@ namespace electrodomesticosJaviPlus
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Producto' Puede moverla o quitarla según sea necesario.
             //this.productoTableAdapter.Fill(this.database3DataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'database3DataSet.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.database3DataSet.Producto);
+            //this.productoTableAdapter.Fill(this.database3DataSet.Producto);
 
         }
 
@@ -41,7 +41,7 @@ namespace electrodomesticosJaviPlus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.productoTableAdapter.FillBynombre(this.database3DataSet.Producto, nombreTextBox.Text);
+            this.productoTableAdapter.FillBynombreAlex(this.database3DataSet.Producto, nombreTextBox.Text);
         }
 
         private void productoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,6 +57,11 @@ namespace electrodomesticosJaviPlus
         private void button1_Click(object sender, EventArgs e)
         {
             //apretando este boton guarda los datos en la base de datos
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.productoTableAdapter.Insert(nombreTextBox.Text, familiaTextBox.Text, precioTextBox.Text, int.Parse(stockTextBox1.Text));
         }
 
       

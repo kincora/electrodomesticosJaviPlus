@@ -110,7 +110,6 @@
     </None>
     <None Include="Database3DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database3DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Database3DataSet.xss">

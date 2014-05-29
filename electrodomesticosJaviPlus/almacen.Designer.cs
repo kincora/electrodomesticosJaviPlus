@@ -38,13 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
             this.button3 = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.stockTextBox1 = new System.Windows.Forms.TextBox();
@@ -66,6 +59,14 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.productoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.button4 = new System.Windows.Forms.Button();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database3DataSet = new electrodomesticosJaviPlus.Database3DataSet();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.database3DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.ProductoTableAdapter();
             this.tableAdapterManager = new electrodomesticosJaviPlus.Database3DataSetTableAdapters.TableAdapterManager();
@@ -77,17 +78,17 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
             this.productoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database3DataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel1
             // 
             nombreLabel1.AutoSize = true;
-            nombreLabel1.Location = new System.Drawing.Point(13, 15);
+            nombreLabel1.Location = new System.Drawing.Point(13, 56);
             nombreLabel1.Name = "nombreLabel1";
             nombreLabel1.Size = new System.Drawing.Size(47, 13);
             nombreLabel1.TabIndex = 8;
@@ -96,7 +97,7 @@
             // familiaLabel
             // 
             familiaLabel.AutoSize = true;
-            familiaLabel.Location = new System.Drawing.Point(13, 41);
+            familiaLabel.Location = new System.Drawing.Point(13, 91);
             familiaLabel.Name = "familiaLabel";
             familiaLabel.Size = new System.Drawing.Size(42, 13);
             familiaLabel.TabIndex = 9;
@@ -105,7 +106,7 @@
             // precioLabel1
             // 
             precioLabel1.AutoSize = true;
-            precioLabel1.Location = new System.Drawing.Point(15, 67);
+            precioLabel1.Location = new System.Drawing.Point(13, 127);
             precioLabel1.Name = "precioLabel1";
             precioLabel1.Size = new System.Drawing.Size(40, 13);
             precioLabel1.TabIndex = 10;
@@ -114,7 +115,7 @@
             // stockLabel1
             // 
             stockLabel1.AutoSize = true;
-            stockLabel1.Location = new System.Drawing.Point(19, 96);
+            stockLabel1.Location = new System.Drawing.Point(17, 167);
             stockLabel1.Name = "stockLabel1";
             stockLabel1.Size = new System.Drawing.Size(38, 13);
             stockLabel1.TabIndex = 11;
@@ -123,7 +124,7 @@
             // idLabel1
             // 
             idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(36, 126);
+            idLabel1.Location = new System.Drawing.Point(36, 209);
             idLabel1.Name = "idLabel1";
             idLabel1.Size = new System.Drawing.Size(19, 13);
             idLabel1.TabIndex = 11;
@@ -141,6 +142,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.productoDataGridView);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(idLabel1);
@@ -157,7 +159,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(13, 45);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(771, 351);
+            this.panel2.Size = new System.Drawing.Size(771, 342);
             this.panel2.TabIndex = 0;
             // 
             // productoDataGridView
@@ -178,60 +180,20 @@
             this.productoDataGridView.TabIndex = 2;
             this.productoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productoDataGridView_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // familiaDataGridViewTextBoxColumn
-            // 
-            this.familiaDataGridViewTextBoxColumn.DataPropertyName = "Familia";
-            this.familiaDataGridViewTextBoxColumn.HeaderText = "Familia";
-            this.familiaDataGridViewTextBoxColumn.Name = "familiaDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // stockDataGridViewTextBoxColumn
-            // 
-            this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
-            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
-            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.database3DataSet;
-            // 
-            // database3DataSet
-            // 
-            this.database3DataSet.DataSetName = "Database3DataSet";
-            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(290, 299);
+            this.button3.Location = new System.Drawing.Point(66, 238);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(98, 40);
             this.button3.TabIndex = 13;
-            this.button3.Text = "TODOS";
+            this.button3.Text = "MOSTRAR TABLA";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(66, 123);
+            this.idTextBox.Location = new System.Drawing.Point(67, 206);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(280, 20);
             this.idTextBox.TabIndex = 12;
@@ -239,7 +201,7 @@
             // stockTextBox1
             // 
             this.stockTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Stock", true));
-            this.stockTextBox1.Location = new System.Drawing.Point(66, 93);
+            this.stockTextBox1.Location = new System.Drawing.Point(66, 167);
             this.stockTextBox1.Name = "stockTextBox1";
             this.stockTextBox1.Size = new System.Drawing.Size(280, 20);
             this.stockTextBox1.TabIndex = 12;
@@ -247,16 +209,16 @@
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(66, 67);
+            this.precioTextBox.Location = new System.Drawing.Point(67, 127);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(280, 20);
             this.precioTextBox.TabIndex = 11;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(22, 299);
+            this.button2.Location = new System.Drawing.Point(66, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.Size = new System.Drawing.Size(82, 32);
             this.button2.TabIndex = 9;
             this.button2.Text = "BUSCAR";
             this.button2.UseVisualStyleBackColor = true;
@@ -265,7 +227,7 @@
             // familiaTextBox
             // 
             this.familiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Familia", true));
-            this.familiaTextBox.Location = new System.Drawing.Point(66, 41);
+            this.familiaTextBox.Location = new System.Drawing.Point(66, 88);
             this.familiaTextBox.Name = "familiaTextBox";
             this.familiaTextBox.Size = new System.Drawing.Size(280, 20);
             this.familiaTextBox.TabIndex = 10;
@@ -273,16 +235,16 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(66, 15);
+            this.nombreTextBox.Location = new System.Drawing.Point(66, 53);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(280, 20);
             this.nombreTextBox.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(156, 299);
+            this.button1.Location = new System.Drawing.Point(250, 232);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 23);
+            this.button1.Size = new System.Drawing.Size(97, 46);
             this.button1.TabIndex = 8;
             this.button1.Text = "GUARDAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -412,6 +374,56 @@
             this.productoBindingNavigatorSaveItem.Text = "Guardar datos";
             this.productoBindingNavigatorSaveItem.Click += new System.EventHandler(this.productoBindingNavigatorSaveItem_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(267, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(79, 33);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "INSERTAR";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.database3DataSet;
+            // 
+            // database3DataSet
+            // 
+            this.database3DataSet.DataSetName = "Database3DataSet";
+            this.database3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // familiaDataGridViewTextBoxColumn
+            // 
+            this.familiaDataGridViewTextBoxColumn.DataPropertyName = "Familia";
+            this.familiaDataGridViewTextBoxColumn.HeaderText = "Familia";
+            this.familiaDataGridViewTextBoxColumn.Name = "familiaDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            // 
             // database3DataSetBindingSource
             // 
             this.database3DataSetBindingSource.DataSource = this.database3DataSet;
@@ -443,11 +455,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).EndInit();
             this.productoBindingNavigator.ResumeLayout(false);
             this.productoBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database3DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database3DataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -490,5 +502,6 @@
         private System.Windows.Forms.TextBox familiaTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
