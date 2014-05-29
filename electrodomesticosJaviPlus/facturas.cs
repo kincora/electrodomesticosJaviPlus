@@ -46,7 +46,7 @@ namespace electrodomesticosJaviPlus
         private void button3_Click(object sender, EventArgs e)
         {
             //para que rellene los campos del cliente al pulsar el boton buscar
-            this.clientesTableAdapter.FillByNombreBeatriz(this.database3DataSet.Clientes, nombreTextBox1.Text);
+            this.clientesTableAdapter.FillByNombre(this.database3DataSet.Clientes, nombreTextBox1.Text);
             //para que rellene los campos del producto al pulsar el boton buscar
 
         }
@@ -55,7 +55,7 @@ namespace electrodomesticosJaviPlus
         {
             //para que rellene los campos del producto al pulsar el boton buscar
 
-            this.productoTableAdapter.FillByNombreBeatriz(this.database3DataSet.Producto, nombreTextBox.Text);
+            this.productoTableAdapter.FillBynombreAlex(this.database3DataSet.Producto, nombreTextBox.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
